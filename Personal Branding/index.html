@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Digital Space</title>
+<meta name="description" content="Personal documents, resources and social links in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home" id="brandName">Your Name</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav id="menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#documents">Documents</a><a href="#resources">Resources</a><a href="#social">Social Media</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="home">
+    <div class="shape s1" aria-hidden="true"></div><div class="shape s2" aria-hidden="true"></div><div class="shape s3" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        <p class="tag" id="tagline"></p>
+        <h1 id="heroName">Your Name</h1>
+        <p class="lead" id="heroIntro"></p>
+        <div class="btns">
+          <a class="btn primary" href="#documents">Explore Documents</a>
+          <a class="btn ghost" href="#contact">Connect With Me</a>
+        </div>
+      </div>
+      <div class="photo-stack tilt" aria-hidden="false">
+        <div class="photo-back"></div>
+        <div class="photo"><img id="photo" alt="Profile photo" hidden><span id="initials"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="documents">
+    <div class="wrap">
+      <h2>Document Library</h2>
+      <p class="sub">Click any card to open the document. Some files may need permission from the owner.</p>
+      <div class="tools">
+        <label class="search"><span class="sr">Search documents by title</span><input id="q" type="search" placeholder="Search by title" autocomplete="off"></label>
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div class="grid" id="docGrid"></div>
+      <p class="empty" id="docEmpty" hidden>No documents match. Try a different word or choose “All”.</p>
+    </div>
+  </section>
+
+  <section class="sec alt" id="resources">
+    <div class="wrap">
+      <h2>Useful Links</h2>
+      <p class="sub">Websites and tools I use often.</p>
+      <div class="grid small" id="linkGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="social">
+    <div class="wrap">
+      <h2>Social Media</h2>
+      <p class="sub">Find me online.</p>
+      <div class="grid social" id="socialGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="about">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <div class="about">
+        <div class="glass"><h3>Introduction</h3><p id="aboutText"></p></div>
+        <div class="glass"><h3>Interests &amp; skills</h3><ul class="pills" id="skills"></ul></div>
+        <div class="glass"><h3>Current projects</h3><ul id="projects"></ul></div>
+        <div class="glass"><h3>Future goals</h3><ul id="goals"></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap center">
+      <h2>Contact</h2>
+      <p class="sub">The quickest way to reach me is email.</p>
+      <a class="btn primary" id="mailBtn" href="#">Send an email</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <strong id="footBrand">Your Name</strong>
+    <nav aria-label="Footer"><a href="#documents">Documents</a><a href="#resources">Resources</a><a href="#social">Social</a><a href="#contact">Contact</a></nav>
+    <div class="foot-social" id="footSocial"></div>
+    <p id="copy"></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
